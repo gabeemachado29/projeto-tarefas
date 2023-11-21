@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifpr.pgua.eic.tarefas.controllers.ListarTarefas">
+   <children>
+      <TableView fx:id="tbTarefas" layoutX="46.0" layoutY="41.0" prefHeight="310.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="tbcId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tbcTitulo" prefWidth="75.0" text="Titulo" />
+            <TableColumn fx:id="tbcDescricao" prefWidth="75.0" text="Descrição" />
+            <TableColumn fx:id="tbcDtprazo" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="tbcCategoria" prefWidth="75.0" text="Categoria" />
+        </columns>
+      </TableView>
+      <Button layoutX="517.0" layoutY="41.0" mnemonicParsing="false" onAction="#deletar" text="Apagar" />
+      <Button layoutX="439.0" layoutY="41.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button layoutX="517.0" layoutY="336.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+   </children>
+</AnchorPane>

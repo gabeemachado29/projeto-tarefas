@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ifpr.pgua.eic.tarefas.controllers.ListarCategorias">
+   <children>
+      <ListView fx:id="lstCategorias" layoutX="34.0" layoutY="27.0" prefHeight="357.0" prefWidth="252.0" />
+      <Button layoutX="300.0" layoutY="35.0" mnemonicParsing="false" onAction="#editar" prefHeight="34.0" prefWidth="73.0" text="Editar" />
+      <Button layoutX="486.0" layoutY="333.0" mnemonicParsing="false" onAction="#voltar" prefHeight="34.0" prefWidth="73.0" text="Voltar" />
+      <Button layoutX="401.0" layoutY="35.0" mnemonicParsing="false" onAction="#deletar" prefHeight="34.0" prefWidth="73.0" text="Excluir" />
+   </children>
+</AnchorPane>
