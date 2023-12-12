@@ -15,9 +15,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Alert.AlertType;
 
@@ -58,7 +56,7 @@ public class ListarTarefas implements Initializable {
     @FXML
     private void editar(){
         Tarefas tarefas = tbTarefas.getSelectionModel().getSelectedItem();
-
+        
         if(tarefas != null){
             App.pushScreen("CADASTROTAREFAS", o -> new CadastroTarefas(repositorio, repositorioCategorias, tarefas));
         }
@@ -67,8 +65,10 @@ public class ListarTarefas implements Initializable {
     @FXML
     private void deletar(){
         Tarefas tarefas = tbTarefas.getSelectionModel().getSelectedItem();
-
+        Resultado resultado = repositorio.deletaTarefa(tarefas.getId());
+        Alert alert;
         if(tarefas != null){
+            alert = new Alert(AlertType.INFORMATION, resultado.getMsg());
             repositorio.deletaTarefa(tarefas.getId());
         }
     }

@@ -23,4 +23,9 @@ public class Principal {
     private void listarTarefas(){
         App.pushScreen("LISTARTAREFAS");
     }
+
+    @FXML
+    private void login(){
+        App.pushScreen("LOGIN");
+    }
 }

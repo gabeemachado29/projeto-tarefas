@@ -12,3 +12,9 @@ CREATE TABLE IF NOT EXISTS tarefa (
     categoria INTEGER NOT NULL,
     FOREIGN KEY (categoria) REFERENCES categoria(id),
 );
+
+CREATE TABLE IF NOT EXISTS usuario (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email varchar(255) NOT NULL,
+    senha varchar(255) NOT NULL
+);

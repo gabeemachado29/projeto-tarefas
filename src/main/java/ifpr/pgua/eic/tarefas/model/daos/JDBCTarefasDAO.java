@@ -151,7 +151,7 @@ public class JDBCTarefasDAO implements TarefasDAO {
             int ret = pstm.executeUpdate();
 
             if (ret==1) {
-                return Resultado.sucesso("Tarefa excluída com sucesso!", con);
+                return Resultado.sucesso("Tarefa excluída com sucesso!", id);
             } 
             return Resultado.erro("Nenhuma tarefa encontrada com o ID fornecido.");
         } catch (SQLException e) {
